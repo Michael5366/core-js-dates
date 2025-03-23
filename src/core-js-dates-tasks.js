@@ -39,19 +39,20 @@ function getTime(date) {
     .join(':');
 }
 
-/**
- * Returns the name of the day of the week for a given date string.
- *
- * @param {string} date - date and time.
- * @return {string} the name of the day of the week
- *
- * @example:
- * '01 Jan 1970 00:00:00 UTC' => 'Thursday'
- * '03 Dec 1995 00:12:00 UTC' => 'Sunday'
- * '2024-01-30T00:00:00.000Z' => 'Tuesday'
- */
-function getDayName(/* date */) {
-  throw new Error('Not implemented');
+function getDayName(date) {
+  const daysOfWeek = [
+    'Sunday',
+    'Monday',
+    'Tuesday',
+    'Wednesday',
+    'Thursday',
+    'Friday',
+    'Saturday',
+  ];
+
+  const dayIndex = new Date(date).getDay();
+
+  return daysOfWeek[dayIndex];
 }
 
 /**
